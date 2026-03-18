@@ -1,8 +1,6 @@
 <template>
   <div class="card">
     <h2>{{ death.leading_cause }}</h2>
-    <p>Year: {{ death.year }}</p>
-    <p>Deaths: {{ death.deaths }}</p>
     <h3>{{ id }}</h3>
   </div>
 </template>
