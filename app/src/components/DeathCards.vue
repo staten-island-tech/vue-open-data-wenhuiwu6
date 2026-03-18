@@ -1,13 +1,14 @@
 <template>
-  <router-link :to="pkmnPath" class="card">
-    <h2>{{ props.death.leading_cause }}</h2>
-    <h3>{{ props.id }}</h3>
-  </router-link>
+  <div class="card">
+    <h2>{{ death.leading_cause }}</h2>
+    <p>Year: {{ death.year }}</p>
+    <p>Deaths: {{ death.deaths }}</p>
+    <h3>{{ id }}</h3>
+  </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-const props = defineProps({
+defineProps({
   death: {
     type: Object,
     required: true,
@@ -17,9 +18,6 @@ const props = defineProps({
     required: true,
   },
 })
-// const pkmnPath = computed(() => {
-//   return `/pkmn/${props.pokemon.name}`
-// })
 </script>
 
 <style scoped>
