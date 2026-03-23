@@ -9,6 +9,7 @@
 <script setup>
 import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import { Bar } from 'vue-chartjs'
 const route = useRoute()
 const death = ref(null)
 async function getDeath(id) {
