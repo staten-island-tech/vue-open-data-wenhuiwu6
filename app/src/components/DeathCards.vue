@@ -1,7 +1,8 @@
 <template>
   <div class="card">
-    <h2>{{ death.leading_cause }}</h2>
-    <h3>{{ id }}</h3>
+    <h1>{{ death.leading_cause }}</h1>
+    <h2>{{ death.deaths }}</h2>
+    <p>{{ id }}</p>
   </div>
 </template>
 

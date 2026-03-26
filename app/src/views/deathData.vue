@@ -1,20 +1,17 @@
 <template>
   <div>
-    <h2>{{ death.leading_cause }}</h2>
-    <p>Year: {{ death.year }}</p>
-    <p>Deaths: {{ death.deaths }}</p>
+    <h1>{{ DeathCards.leading_cause }}</h1>
   </div>
 </template>
 
 <script setup>
 import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { Bar } from 'vue-chartjs'
 const route = useRoute()
 const death = ref(null)
 async function getDeath(id) {
   console.log('did i run?')
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+  const response = await fetch(`https://data.cityofnewyork.us/resource/jb7j-dtam.json/${id}`)
   const data = await response.json()
   death.value = data
 }
