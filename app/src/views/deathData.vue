@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ DeathCards.leading_cause }}</h1>
+    <h1>{{ death.leading_cause }}</h1>
   </div>
 </template>
 

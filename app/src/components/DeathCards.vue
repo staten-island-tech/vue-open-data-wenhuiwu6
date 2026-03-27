@@ -1,13 +1,14 @@
 <template>
-  <div class="card">
+  <router-link :to="DeathPath" class="card">
     <h1>{{ death.leading_cause }}</h1>
     <h2>{{ death.deaths }}</h2>
     <p>{{ id }}</p>
-  </div>
+  </router-link>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+const props = defineProps({
   death: {
     type: Object,
     required: true,
@@ -16,6 +17,10 @@ defineProps({
     type: Number,
     required: true,
   },
+})
+
+const DeathPath = computed(() => {
+  return `/dth/${props.death.leading_cause}`
 })
 </script>
 
