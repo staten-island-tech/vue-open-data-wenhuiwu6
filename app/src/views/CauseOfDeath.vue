@@ -17,7 +17,7 @@ async function getDeath() {
   try {
     const response = await fetch('https://data.cityofnewyork.us/resource/jb7j-dtam.json')
     const data = await response.json()
-    death.value = data.results
+    death.value = data
   } catch (error) {
     console.log(error)
   }

@@ -20,7 +20,7 @@ const props = defineProps({
 })
 
 const DeathPath = computed(() => {
-  return `/dth/${props.death.leading_cause}`
+  return `/dth/${props.id}`
 })
 </script>
 

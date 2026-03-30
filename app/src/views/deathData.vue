@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ death.leading_cause }}</h1>
+    <h1 v-if="death">{{ death.leading_cause }}</h1>
   </div>
 </template>
 
@@ -11,9 +11,9 @@ const route = useRoute()
 const death = ref(null)
 async function getDeath(id) {
   console.log('did i run?')
-  const response = await fetch(`https://data.cityofnewyork.us/resource/jb7j-dtam.json/${id}`)
+  const response = await fetch('https://data.cityofnewyork.us/resource/jb7j-dtam.json')
   const data = await response.json()
-  death.value = data
+  death.value = data[Number(id) - 1]
 }
 watch(
   () => route.params.id,

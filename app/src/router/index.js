@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import CauseOfDeath from '@/views/CauseOfDeath.vue'
-import DeathData from '@'
+import DeathData from '@/views/deathData.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
