@@ -3,7 +3,12 @@
     <h1>Deaths in 2021</h1>
   </div>
   <div class="container">
-    <DeathCards v-for="(mon, index) in death" :key="index" :death="mon" :id="index + 1" />
+    <DeathCards
+      v-for="(mon, index) in death"
+      :key="mon.leading_cause"
+      :death="mon"
+      :id="index + 1"
+    />
   </div>
 </template>
 

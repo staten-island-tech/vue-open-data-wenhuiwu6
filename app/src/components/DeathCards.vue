@@ -8,6 +8,7 @@
 
 <script setup>
 import { computed } from 'vue'
+
 const props = defineProps({
   death: {
     type: Object,
